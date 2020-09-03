@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="container">
+        <manga-container image="https://upload.wikimedia.org/wikipedia/vi/3/3e/Naruto_01_m.jpg" name="Naruto"
+            views="96000" likes="89044" status="Completed">
+        </manga-container>
+        <manga-container image="https://upload.wikimedia.org/wikipedia/vi/e/e1/FairyTail-Volume_1_Cover.jpg"
+            name="Fairy Tail" views="101508" likes="50006" status="Completed"></manga-container>
+        <manga-container image="https://www.manganetworks.net/wp-content/uploads/2016/09/black-cover-1.jpg"
+            name="Black Clover" views="87098" likes="49506" status="Ongoing"></manga-container>
+    </div>
+    <style>
+        #container {
+            display: flex;
+            justify-content:space-around;
+            flex-wrap: wrap;
+            text-align: center;
+            flex-direction: row;
+        }
+
+    </style>
+    <script src="manga-container.js" type="module"></script>
+
+</body>
+</html>
