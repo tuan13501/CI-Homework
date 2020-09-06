@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="bài-3.css">
+    <script src="https://kit.fontawesome.com/aeafc74a1b.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2&display=swap" rel="stylesheet">
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-firestore.js"></script>
+    <script src="./js/app.js"></script>
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-analytics.js"></script>
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyCdq7ZOsm1cJcl3PUnveGN34X6Yi1uBmrU",
+            authDomain: "cijs-48-tuan.firebaseapp.com",
+            databaseURL: "https://cijs-48-tuan.firebaseio.com",
+            projectId: "cijs-48-tuan",
+            storageBucket: "cijs-48-tuan.appspot.com",
+            messagingSenderId: "789952642574",
+            appId: "1:789952642574:web:c2628dc5b046bc6902865f",
+            measurementId: "G-1D6M4KLEV5"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+    </script>
+    <link rel="stylesheet" href="./css/app.css">
+</head>
+
+<body>
+    <div id="container">
+        <div class="container-form">
+            <div class="container-form-title">
+                <p>Registration Form</p>
+            </div>
+            <div class="container-form-body-input">
+                <div class="input-info">
+                    <input id="fname" type="text" placeholder="First Name" />
+                </div>
+                <div class="input-info">
+                    <input id="lname" type="text" placeholder="Last Name" />
+                </div>
+                <div class="input-info">
+                    <input id="email" type="text" placeholder="Email" />
+                </div>
+                <div class="input-info">
+                    <input id="phnum" placeholder="Phone Number" />
+                </div>
+            </div>
+            <div class="container-form-body-checkbox">
+                <div class="checkbox">
+                    <input type="checkbox" />
+                    <p>Lorem ipsum dolor sit amet</p>
+                </div>
+                <div class="checkbox">
+                    <input type="checkbox" />
+                    <p>Lorem ipsum dolor sit amet</p>
+                </div>
+            </div>
+            <div class="container-form-body-button" onclick="addData()">
+                <button>Register </button>
+            </div>
+        </div>
+        <div class="footer">
+            <p>designed by <i class="fab fa-android"></i> <b>Mindx</b> </p>
+        </div>
+    </div>
+
+</body>
+
+</html>
