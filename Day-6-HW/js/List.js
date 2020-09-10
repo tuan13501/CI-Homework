@@ -20,7 +20,6 @@ class List extends BaseComponent {
         }
 
         this._shadowRoot.innerHTML = `
-            <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap" rel="stylesheet">
             <link rel="stylesheet" type="text/css" href="./css/list.css">
             <form id="form-add-meme">
                 <input type="text" name="name" placeholder="Meme's name">
