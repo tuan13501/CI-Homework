@@ -12,4 +12,4 @@ function SearchNum(arr, k) {
     return result;
 }
 
-console.log(findIndex(arr, k));
+console.log(SearchNum(arr, k));
