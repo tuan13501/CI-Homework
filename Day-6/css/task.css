@@ -1,0 +1,49 @@
+.task {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+#content {
+    display: flex;
+    justify-content: center;
+    width: 500px;
+    background: #ec4662;
+    color:white;
+}
+.task>div{
+    margin: 5px;
+    display: flex;
+    font-family: 'Baloo 2', cursive;
+    padding: 10px;
+    border-radius: 10px;
+}
+#is-completed {
+    display: flex;
+    justify-content: center;
+    width: 300px;
+    background: #00f534;
+    color:white;
+}
+#date-modified{
+    display: flex;
+    justify-content: center;
+    background: #21e8c7;
+    color:white;
+    width: 300px;
+}
+#btn-edit{
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    width: 50px;
+    background-color: #212121;
+    color: white;
+}
+#btn-delete{
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    width: 50px;
+    background-color: #232526;
+    color: white;
+}
