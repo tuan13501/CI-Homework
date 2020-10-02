@@ -65,20 +65,21 @@ class profileEditor extends BaseComponent {
         this.$formProfileEditor.addEventListener('profile-editor', (event) => {
             this.saveProfile(event.detail.oldProfile, event.detail.newProfile)
         });
+        console.log(this.$formProfileEditor);
         this.$formProfileEditor.onsubmit = async (event) => {
             event.preventDefault();
             let newProfile = {
-                'name': this.$formProfileEditor.name.value,
-                'avatarLink': this.$formProfileEditor.avatarLink.value,
-                'coverLink': this.$formProfileEditor.coverLink.value,
-                'description': this.$formProfileEditor.description.value,
-                'workExperience': this.$formProfileEditor.workExperience.value,
-                'webReference': this.$formProfileEditor.webReference.value,
-                'jobTitle': this.$formProfileEditor.jobTitle.value,
-                'dateModified': this.$formProfileEditor.dateModified.value,
-                'location': this.$formProfileEditor.location.value,
-                'followers': this.$formProfileEditor.followers.value,
-                'following': this.$formProfileEditor.following.value,
+                'name': this.$formProfileEditor.querySelector('.name').value,
+                'avatarLink': this.$formProfileEditor.querySelector('.avatar-link').value,
+                'coverLink': this.$formProfileEditor.querySelector('.cover-link').value,
+                'description': this.$formProfileEditor.querySelector('.description').value,
+                'workExperience': this.$formProfileEditor.querySelector('.work-experience').value,
+                'webReference': this.$formProfileEditor.querySelector('.web-reference').value,
+                'jobTitle': this.$formProfileEditor.querySelector('.job-title').value,
+                'dateModified': this.$formProfileEditor.querySelector('.date-modified').value,
+                'location': this.$formProfileEditor.querySelector('.location').value,
+                'followers': this.$formProfileEditor.querySelector('.followers').value,
+                'following': this.$formProfileEditor.querySelector('.following').value,
             }
             this.setState({
                 tasks: [
