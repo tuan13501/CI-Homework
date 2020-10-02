@@ -47,17 +47,17 @@ class profileEditor extends BaseComponent {
         this._shadowRoot.innerHTML = /*html*/ `
         
         <form class="profile-editor">
-        <input-wrapper class="name" label="Name" type="text" error="${this.state.errors.name}" value="${this.state.data.name}"></input-wrapper>
-        <input-wrapper class="avatar-link" label="Avatar Link" type="url" error="${this.state.errors.name}" value="${this.state.data.avatarLink}"></input-wrapper>
-        <input-wrapper class="cover-link" label="Cover Link" type="url" error="${this.state.errors.name}" value="${this.state.data.coverLink}"></input-wrapper>
-        <input-wrapper class="description" label="Description" type="text" error="${this.state.errors.name}" value="${this.state.data.description}"></input-wrapper>
-        <input-wrapper class="work-experience" label="Work Experience" type="text" error="${this.state.errors.name}" value="${this.state.data.workExperience}"></input-wrapper>
-        <input-wrapper class="web-reference" label="Web Reference" type="text" error="${this.state.errors.name}" value="${this.state.data.webReference}"></input-wrapper>
-        <input-wrapper class="job-title" label="Job" type="text" error="${this.state.errors.name}" value="${this.state.data.jobTitle}"></input-wrapper>
-        <input-wrapper class="date-modified" label="Date" type="text" error="${this.state.errors.name}" value="${this.state.data.dateModified}"></input-wrapper>
-        <input-wrapper class="location" label="Location" type="text" error="${this.state.errors.name}" value="${this.state.data.location}"></input-wrapper>
-        <input-wrapper class="followers" label="Followers" type="number" error="${this.state.errors.name}" value="${this.state.data.followers}"></input-wrapper>
-        <input-wrapper class="following" label="Following" type="number" error="${this.state.errors.name}" value="${this.state.data.following}"></input-wrapper>
+        <input-wrapper class="name" label="Name" type="text" value="${this.state.data.name}"></input-wrapper>
+        <input-wrapper class="avatar-link" label="Avatar Link" type="url" value="${this.state.data.avatarLink}"></input-wrapper>
+        <input-wrapper class="cover-link" label="Cover Link" type="url" value="${this.state.data.coverLink}"></input-wrapper>
+        <input-wrapper class="description" label="Description" type="text" value="${this.state.data.description}"></input-wrapper>
+        <input-wrapper class="work-experience" label="Work Experience" type="text" value="${this.state.data.workExperience}"></input-wrapper>
+        <input-wrapper class="web-reference" label="Web Reference" type="text" value="${this.state.data.webReference}"></input-wrapper>
+        <input-wrapper class="job-title" label="Job" type="text" value="${this.state.data.jobTitle}"></input-wrapper>
+        <input-wrapper class="date-modified" label="Date" type="text" value="${this.state.data.dateModified}"></input-wrapper>
+        <input-wrapper class="location" label="Location" type="text" value="${this.state.data.location}"></input-wrapper>
+        <input-wrapper class="followers" label="Followers" type="number" value="${this.state.data.followers}"></input-wrapper>
+        <input-wrapper class="following" label="Following" type="number" value="${this.state.data.following}"></input-wrapper>
         <button>Save</button>
         </form>
         `;
@@ -69,24 +69,20 @@ class profileEditor extends BaseComponent {
         this.$formProfileEditor.onsubmit = async (event) => {
             event.preventDefault();
             let newProfile = {
-                'name': this.$formProfileEditor.querySelector('.name').value,
-                'avatarLink': this.$formProfileEditor.querySelector('.avatar-link').value,
-                'coverLink': this.$formProfileEditor.querySelector('.cover-link').value,
-                'description': this.$formProfileEditor.querySelector('.description').value,
-                'workExperience': this.$formProfileEditor.querySelector('.work-experience').value,
-                'webReference': this.$formProfileEditor.querySelector('.web-reference').value,
-                'jobTitle': this.$formProfileEditor.querySelector('.job-title').value,
-                'dateModified': this.$formProfileEditor.querySelector('.date-modified').value,
-                'location': this.$formProfileEditor.querySelector('.location').value,
-                'followers': this.$formProfileEditor.querySelector('.followers').value,
-                'following': this.$formProfileEditor.querySelector('.following').value,
+                'name': this.$formProfileEditor.name.value,
+                'avatarLink': this.$formProfileEditor.avatarLink.value,
+                'coverLink': this.$formProfileEditor.coverLink.value,
+                'description': this.$formProfileEditor.description.value,
+                'workExperience': this.$formProfileEditor.work-experience.value,
+                'webReference': this.$formProfileEditor.web-reference.value,
+                'jobTitle': this.$formProfileEditor.job-title.value,
+                'dateModified': this.$formProfileEditor.date-modified.value,
+                'location': this.$formProfileEditor.location.value,
+                'followers': this.$formProfileEditor.followers.value,
+                'following': this.$formProfileEditor.following.value,
             }
-            this.setState({
-                tasks: [
-                    ...this.state.data,
-                    newProfile
-                ]
-            })
+            console.log(newProfile);
+            this.setState(newProfile);
             await firebase.firestore().collection('Users').add({
                 content: content,
                 owner: currentUser.id,
