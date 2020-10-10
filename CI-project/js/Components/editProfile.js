@@ -4,9 +4,6 @@ import { BaseComponent } from "../BaseComponent.js"
 class editProfile extends BaseComponent {
     constructor() {
         super();
-        this.state = {
-
-        }
         this.props = {
             'name': '',
             'avatarLink': '',
@@ -27,14 +24,16 @@ class editProfile extends BaseComponent {
     render() {
         this._shadowRoot.innerHTML = /*html*/`
         <div class="edit-user-profile">
-        <button>Edit your profile</button>
+        <a href="#!/editor">Edit your profile</a>
         </div>
         `;
-        this.$editProfile = this._shadowRoot.querySelector('edit-user-profile');
+        this.$editProfile = this._shadowRoot.querySelector('.edit-user-profile');
         this.$editProfile.onsubmit = async (event) => {
             event.preventDefault();
-            let currentUser = getCurrentUser();
-
+            // let response = await firebase.firestore().collection('users').where('owner', '==', currentUser.id).get();
+            // if (!response.empty) {
+            //     router.navigate('/editor');
+            // }
         }
 
     }

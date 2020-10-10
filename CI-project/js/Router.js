@@ -5,5 +5,5 @@ window.router = new Navigo(root, useHash, hash);
 
 let $app = document.getElementById('app');
 window.router.on('/editor', function () {
-    $app.innerHTML = '<users-editor><users-editor>';
+    $app.innerHTML = '<profile-editor></profile-editor>';
 }).resolve();
