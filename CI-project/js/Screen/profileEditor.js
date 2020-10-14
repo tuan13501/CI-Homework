@@ -103,3 +103,4 @@ class profileEditor extends BaseComponent {
 }
 
 window.customElements.define('profile-editor', profileEditor);
+export {profileEditor}

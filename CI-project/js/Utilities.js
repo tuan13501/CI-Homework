@@ -21,3 +21,6 @@ export function setCurrentUser(currentUser) {
 // export function serCurrentUser(currentUser) {
 //     localStorage.setItem('current-user',)
 // }
+export function renderID() {
+    return Math.random().toString(36).substring(2);
+}
